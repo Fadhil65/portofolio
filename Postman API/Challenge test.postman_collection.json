@@ -1,0 +1,826 @@
+{
+	"info": {
+		"_postman_id": "81c192ce-1311-49e7-8bce-2f8b980f9cd6",
+		"name": "Challenge test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22549216"
+	},
+	"item": [
+		{
+			"name": "Post Register",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "full_name",
+							"value": "Fadhil",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "fadhil6@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "phone_number",
+							"value": "0812345678910",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "mampang",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Fadhil/Desktop/viper-logo-valorant-riot-video-game-wallpaper-2560x1600_7.jpg",
+							"disabled": true
+						},
+						{
+							"key": "city",
+							"value": "jakarta",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base.url}}/auth/register",
+					"host": [
+						"{{base.url}}"
+					],
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "fadhil6@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base.url}}/auth/login",
+					"host": [
+						"{{base.url}}"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post seller product",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "access_token",
+						"value": "{{base.token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Baju",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Uniqlo UT ",
+							"type": "text"
+						},
+						{
+							"key": "base_price",
+							"value": "299000",
+							"type": "text"
+						},
+						{
+							"key": "category_ids",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "mampang",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Fadhil/Desktop/UT FORTNITE3.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base.url}}/seller/product",
+					"host": [
+						"{{base.url}}"
+					],
+					"path": [
+						"seller",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post seller product 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "access_token",
+						"value": "{{base.token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Elektronik",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Realme GT 2 Pro",
+							"type": "text"
+						},
+						{
+							"key": "base_price",
+							"value": "9490000",
+							"type": "text"
+						},
+						{
+							"key": "category_ids",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "mampang",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Fadhil/Desktop/61d4f5b695b25.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base.url}}/seller/product?access_token={{base.token}}",
+					"host": [
+						"{{base.url}}"
+					],
+					"path": [
+						"seller",
+						"product"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "{{base.token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post seller product 3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "access_token",
+						"value": "{{base.token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Hobby",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Bola Basket",
+							"type": "text"
+						},
+						{
+							"key": "base_price",
+							"value": "799000",
+							"type": "text"
+						},
+						{
+							"key": "category_ids",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "mampang",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Fadhil/Desktop/bagaimana-cara-bermain-bola-basket-yang-baik-dan-benar-xGPHWIr6pa.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base.url}}/seller/product?access_token={{base.token}}",
+					"host": [
+						"{{base.url}}"
+					],
+					"path": [
+						"seller",
+						"product"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "{{base.token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get seller product",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "access_token",
+						"value": "{{base.token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base.url}}/seller/product",
+					"host": [
+						"{{base.url}}"
+					],
+					"path": [
+						"seller",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get seller product Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "access_token",
+						"value": "{{base.token}}",
+						"type": "text"
+					},
+					{
+						"key": "id",
+						"value": "1277",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base.url}}/seller/product/1277",
+					"host": [
+						"{{base.url}}"
+					],
+					"path": [
+						"seller",
+						"product",
+						"1277"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Seller Product",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "access_token",
+						"value": "{{base.token}}",
+						"type": "text"
+					},
+					{
+						"key": "id",
+						"value": "1281",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base.url}}/seller/product/1281",
+					"host": [
+						"{{base.url}}"
+					],
+					"path": [
+						"seller",
+						"product",
+						"1281"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get buyer product",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "access_token",
+						"value": "{{base.token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "id",
+						"value": "1277",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "status",
+							"value": "Fadhil",
+							"type": "text"
+						},
+						{
+							"key": "category_id",
+							"value": "6440",
+							"type": "text"
+						},
+						{
+							"key": "search",
+							"value": "Baju",
+							"type": "text"
+						},
+						{
+							"key": "page",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "per_page",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base.url}}/buyer/product",
+					"host": [
+						"{{base.url}}"
+					],
+					"path": [
+						"buyer",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get buyer product Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "access_token",
+						"value": "{{base.token}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "id",
+						"value": "1277",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "1275",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base.url}}/buyer/product/1275",
+					"host": [
+						"{{base.url}}"
+					],
+					"path": [
+						"buyer",
+						"product",
+						"1275"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Buyer Order",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "body"
+					},
+					{
+						"key": "access_token",
+						"value": "{{base.token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"product_id\": 233,\n  \"bid_price\": 95000\n}"
+				},
+				"url": {
+					"raw": "{{base.url}}/buyer/order",
+					"host": [
+						"{{base.url}}"
+					],
+					"path": [
+						"buyer",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Buyer order",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "access_token",
+						"value": "{{base.token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base.url}}/buyer/order",
+					"host": [
+						"{{base.url}}"
+					],
+					"path": [
+						"buyer",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Buyer order Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "access_token",
+						"value": "{{base.token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base.url}}/buyer/order/1237",
+					"host": [
+						"{{base.url}}"
+					],
+					"path": [
+						"buyer",
+						"order",
+						"1237"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put buyer order id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "access_token",
+						"value": "{{base.token}}",
+						"type": "text"
+					},
+					{
+						"key": "id",
+						"value": "1237",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"bid_price\": 100000\r\n}"
+				},
+				"url": {
+					"raw": "{{base.url}}/buyer/order/1237",
+					"host": [
+						"{{base.url}}"
+					],
+					"path": [
+						"buyer",
+						"order",
+						"1237"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
